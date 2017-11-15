@@ -9,6 +9,13 @@ class AwsParameterStoreHelper < Formula
   url       "https://github.com/tmaher/#{AWSPS}/archive/v0.1.2.tar.gz"
   sha256    '50156985fca5814c5151c04e6a7d9dc645329970d37520442636f883733bb097'
 
+  bottle do
+    root_url "https://github.com/tmaher/#{AWSPS}/releases/download/0.1.2"
+    cellar   :any_skip_relocation
+
+    sha256 'bbde38e2d86501f24b7b8cd2d9675d7639c96355c11c10d9e0058f362806e636' => :high_sierra
+  end
+
   depends_on 'go'       => :build
   depends_on 'govendor' => :build
 
